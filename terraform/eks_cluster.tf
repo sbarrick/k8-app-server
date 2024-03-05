@@ -1,7 +1,7 @@
 resource "aws_eks_cluster" "prod_apps" {
   name     = var.cluster_name
   role_arn = data.aws_role.eks_prod_cluster.arn  #Needed
-  version  = "1.28"
+  version  = var.eks_version
 
   vpc_config {
     subnet_ids              = data.aws_subnets.prod_apps_private.ids
