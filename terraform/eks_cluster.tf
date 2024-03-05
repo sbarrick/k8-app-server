@@ -12,9 +12,9 @@ resource "aws_eks_cluster" "prod_apps" {
   enabled_cluster_log_types = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
   tags = {
     Cluster                                = var.cluster_name
-    Owner                                  = "devops"
-    Env                                    = "prod"
-    Creator                                = "sbarrick"
+    Owner                                  = var.owner
+    Env                                    = var.env
+    Creator                                = var.creator
     Terraform                              = "true"
     "alpha.eksctl.io/cluster-oidc-enabled" = "true"
   }
