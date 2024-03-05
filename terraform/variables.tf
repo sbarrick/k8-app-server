@@ -2,14 +2,18 @@ variable "cluster_name" {
   default = "prod_apps"
 }
 
-variables "owner" {
+variable "owner" {
   default = "devops"
 }
 
-variables "env" {
+variable "env" {
   default = "prod"
 }
 
-variables "creator" {
+variable "creator" {
   default = "sbarrick"
+}
+
+variable "eks_version" {
+  default = "1.28"
 }
